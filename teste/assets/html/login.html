@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/teste/assets/css/login.css">
+    <link rel="shortcut icon" href="/teste/imagens/cerveja_brinde.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <button class="hamburger"></button>
+            <ul class="nav-list">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Sobre</a>
+                </li>
+                <li>
+                    <a href="/teste/index.html">Produtos</a>
+                </li>
+                <li>
+                    <a href="/teste/assets/html/contato.html">Contatos</a>
+                </li>
+                <li class="login">
+                    <a href="/teste/assets/html/login.html">Login / Sign-up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main">
+            <div class="caixa-cadastro">
+                <h1>Login</h1>
+                <div id="msgError"></div>
+                
+                <div class="label-float">
+                    <label for="email" id="userLabel">Email</label>
+                    <input type="email" id="usuario" name="email" required><br><br>
+                </div>
+                <div class="label-float">
+                    <label for="senha" id="senhaLabel">Senha</label>
+                    <input type="password" id="senha" name="senha" required><br><br>
+                </div>
+                <div class="btn">
+                    <button onclick="entrar()" class="btnLogin">Entrar</button>
+                </div>
+                
+                    <p>Não tem uma conta? <a href="/teste/assets/html/sign.html"> Cadastre-se</a></p>
+            </div>
+        </div>
+        <script src="../js/login.js"></script>
+    </main>
+    <footer>
+        <p class="rodape">&copy; 2023 Tornado Delivery</p>
+    </footer>
+</body>
+</html>

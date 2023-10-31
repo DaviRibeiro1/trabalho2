@@ -1,0 +1,235 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-image: url(/teste/imagens/cerveja_brinde.png);
+}
+
+.header{
+  background: #333;
+  padding-inline: 16px;
+}
+
+.nav{
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list{
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-list a{
+  font-size: 18px;
+  color: #fff;
+  padding-block: 16px;
+  text-decoration: none;
+}
+
+.nav-list li:hover{
+  transform: scale(1.1);
+}
+
+.hamburger{
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburger::before,.hamburger::after{
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  left: 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 750px){
+  .hamburger{
+    display: block;
+    z-index: 1;
+  }
+
+  .nav-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+    clip-path: circle(100px at 0% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+  }
+
+  .nav-list a{
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .nav-list li:nth-child(1) a{
+    transition: 0.5s 0.1s;
+  }
+  .nav-list li:nth-child(2) a{
+    transition: 0.5s 0.2s;
+  }
+  .nav-list li:nth-child(3) a{
+    transition: 0.5s 0.3s;
+  }
+  .nav-list li:nth-child(4) a{
+    transition: 0.5s 0.4s; 
+  }
+  .nav-list li:nth-child(5) a{
+    transition: 0.5s 0.5s;
+  }
+  .nav.active .nav-list{
+    clip-path: circle(1500px at 0% -15%);
+    pointer-events: all;
+  }
+}
+
+.login{
+  position: absolute;
+  right: 15px;
+}
+
+.nav.active .login{
+  transition: 3s 1s;
+  position: relative;
+}
+
+.nav.active .nav-list a{
+  opacity: 1;
+}
+
+.nav.active .hamburger{
+  position: fixed;
+  top: 26px;
+  left: 16px;
+  border-top-color: transparent;
+}
+
+.nav.active .hamburger::before{
+  transform: rotate(135deg);
+}
+
+.nav.active .hamburger::after{
+  transform: rotate(-135deg);
+  top: -7px;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+
+.caixa-cadastro{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.caixa-cadastro > h1{
+  padding: 30px 0 30px 0;
+}
+
+label{
+  display: flex;
+}
+
+input{
+  padding-left: 5px;
+  background-color: white;
+  color: black;
+  width: 400px;
+  height: 40px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+input:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.btn > .btnLogin{
+  padding: 10px 50px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+}
+
+.btnLogin:hover{
+  background-color: #c2a815;
+  color: white;
+}
+
+.caixa-cadastro > p {
+  padding: 20px;
+  font-weight: 600;
+}
+
+p > a{
+  color: rgb(127, 128, 206);
+  text-decoration: none;
+} 
+
+p > a:hover{
+  text-decoration: underline;
+}
+
+.rodape{
+  position: fixed;
+  bottom: 0;
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 750px){
+  .caixa-cadastro{
+    width: 350px;
+  }
+
+  input{
+    width: 250px;
+  }
+}
