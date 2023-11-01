@@ -12,171 +12,23 @@ body{
 .header{
   background: #333;
   padding-inline: 16px;
+
 }
 
-.nav{
-  max-width: 1280px;
+nav{
   height: 70px;
+  width: 100%;
   margin-inline: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav h1{
+nav h1{
+  font-size: 30px;
   font-family: 'Bungee Inline', sans-serif;
   color: yellow;
   
-}
-
-.nav-list{
-  display: flex;
-  gap: 32px;
-  list-style: none;
-}
-
-.nav-list a{
-  font-size: 18px;
-  color: #fff;
-  padding-block: 16px;
-  text-decoration: none;
-}
-
-.nav-list li:hover{
-  transform: scale(1.1);
-}
-
-.hamburger{
-  display: none;
-  border: none;
-  background: none;
-  border-top: 3px solid #fff;
-  cursor: pointer;
-}
-
-.hamburger::before,.hamburger::after{
-  content: " ";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #fff;
-  margin-top: 5px;
-  position: relative;
-  left: 0;
-  transition: 0.3s;
-}
-
-@media (max-width: 750px){
-  .hamburger{
-    display: block;
-    z-index: 1;
-  }
-
-  .nav-list{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #333;
-    clip-path: circle(100px at 0% -15%);
-    transition: 1s ease-out;
-
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0;
-    pointer-events: none;
-  }
-
-  .nav-list a{
-    font-size: 24px;
-    opacity: 0;
-  }
-
-  .nav-list li:nth-child(1) a{
-    transition: 0.5s 0.1s;
-  }
-  .nav-list li:nth-child(2) a{
-    transition: 0.5s 0.2s;
-  }
-  .nav-list li:nth-child(3) a{
-    transition: 0.5s 0.3s;
-  }
-  .nav-list li:nth-child(4) a{
-    transition: 0.5s 0.4s; 
-  }
-  .nav-list li:nth-child(5) a{
-    transition: 0.5s 0.5s;
-  }
-  .nav.active .nav-list{
-    clip-path: circle(1500px at 0% -15%);
-    pointer-events: all;
-  }
-
-}
-
-.login{
-  position: absolute;
-  right: 15px;
-}
-
-.carrinho{
-  position: absolute;
-  right: 45px;
-}
-
-.nav.active .login{
-  transition: 3s 1s;
-  position: relative;
-}
-
-.nav.active .nav-list a{
-  opacity: 1;
-}
-
-.nav.active .hamburger{
-  position: fixed;
-  top: 26px;
-  left: 16px;
-  border-top-color: transparent;
-}
-
-.nav.active .hamburger::before{
-  transform: rotate(135deg);
-}
-
-.nav.active .hamburger::after{
-  transform: rotate(-135deg);
-  top: -7px;
-}
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  text-align: center;
-}
-
-.popup-content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  width: 500px;
-  margin: 0 auto;
-}
-
-.btnpopup {
-  font-weight: bold;
-  padding: 10px 20px;
-  margin: 5px;
 }
 
 .Animated-Radial-Menu {
@@ -199,10 +51,10 @@ body{
   position: absolute;
   width: 60px;
   height: 60px;
-  background: #2f363e;
+  background: yellow;
   border: 2px solid #fff;
   border-radius: 50%;
-  color: #fff;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;

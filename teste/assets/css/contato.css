@@ -12,132 +12,96 @@ body{
 .header{
   background: #333;
   padding-inline: 16px;
+
 }
 
-.nav{
-  max-width: 1280px;
+nav{
   height: 70px;
+  width: 100%;
   margin-inline: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.nav-list{
+nav h1{
+  font-size: 30px;
+  font-family: 'Bungee Inline', sans-serif;
+  color: yellow;
+  
+}
+
+.Animated-Radial-Menu {
+  min-height: 100vh;
+  
+}
+
+.Animated-Radial-Menu .menu {
+  position: absolute;
+  top: -105px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
   display: flex;
-  gap: 32px;
-  list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav-list a{
-  font-size: 18px;
-  color: #fff;
-  padding-block: 16px;
-  text-decoration: none;
-}
-
-.nav-list li:hover{
-  transform: scale(1.1);
-}
-
-.hamburger{
-  display: none;
-  border: none;
-  background: none;
-  border-top: 3px solid #fff;
+.Animated-Radial-Menu .menu .toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: yellow;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  z-index: 100;
+  font-size: 2em;
+  transition: transform 0.5s;
 }
 
-.hamburger::before,.hamburger::after{
-  content: " ";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #fff;
-  margin-top: 5px;
-  position: relative;
+.Animated-Radial-Menu .menu li {
+  position: absolute;
   left: 0;
+  list-style: none;
+  transition: 0.3s;
+  transition-delay: calc(0.04s * var(--i));
+  transform: rotate(0deg) translateX(110px);
+  transform-origin: 140px;
+}
+
+.Animated-Radial-Menu .menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: yellow;
+  color: #000000;
+  border: 2px solid var(--clr);
+  border-radius: 50%;
+  font-size: 1.5em;
+  transform: rotate(calc(0deg * var(--i)));
   transition: 0.3s;
 }
 
-@media (max-width: 750px){
-  .hamburger{
-    display: block;
-    z-index: 1;
-  }
-
-  .nav-list{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #333;
-    clip-path: circle(100px at 0% -15%);
-    transition: 1s ease-out;
-
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0;
-    pointer-events: none;
-  }
-
-  .nav-list a{
-    font-size: 24px;
-    opacity: 0;
-  }
-
-  .nav-list li:nth-child(1) a{
-    transition: 0.5s 0.1s;
-  }
-  .nav-list li:nth-child(2) a{
-    transition: 0.5s 0.2s;
-  }
-  .nav-list li:nth-child(3) a{
-    transition: 0.5s 0.3s;
-  }
-  .nav-list li:nth-child(4) a{
-    transition: 0.5s 0.4s; 
-  }
-  .nav-list li:nth-child(5) a{
-    transition: 0.5s 0.5s;
-  }
-  .nav.active .nav-list{
-    clip-path: circle(1500px at 0% -15%);
-    pointer-events: all;
-  }
+.Animated-Radial-Menu .menu li a:hover {
+  background: var(--clr);
+  color: #333;
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
 }
 
-.login{
-  position: absolute;
-  right: 15px;
+.Animated-Radial-Menu .menu.active .toggle {
+  transform: rotate(360deg);
 }
 
-.nav.active .login{
-  transition: 3s 1s;
-  position: relative;
-}
-
-.nav.active .nav-list a{
-  opacity: 1;
-}
-
-.nav.active .hamburger{
-  position: fixed;
-  top: 26px;
-  left: 16px;
-  border-top-color: transparent;
-}
-
-.nav.active .hamburger::before{
-  transform: rotate(135deg);
-}
-
-.nav.active .hamburger::after{
-  transform: rotate(-135deg);
-  top: -7px;
-}
+.Animated-Radial-Menu .menu.active li {
+  transform: translate(calc(65px * var(--i))) translateX(175px);
+}/*# sourceMappingURL=Animated-Radial-Menu.css.map */
 
 .main{
   display: flex;
@@ -153,7 +117,7 @@ body{
   width: 500px;
   height: 500px;
   border-radius: 10px;
-  background-color: #333;
+  background-color: #333333de;
   color: white;
 }
 

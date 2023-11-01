@@ -1,3 +1,11 @@
+let toggle = document.querySelector('.toggle');
+let menu = document.querySelector('.menu');
+
+toggle.onclick = ()=>{
+    menu.classList.toggle('active')
+}
+
+
 function entrar(){
   let usuario = document.querySelector('#usuario')
   let userLabel = document.querySelector('#userLabel')

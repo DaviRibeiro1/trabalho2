@@ -1,3 +1,9 @@
+let toggle = document.querySelector('.toggle');
+let menu = document.querySelector('.menu');
+
+toggle.onclick = ()=>{
+    menu.classList.toggle('active')
+}
 
 let nome = document.querySelector('#nome')
 let labelNome = document.querySelector('#labelNome')
@@ -135,8 +141,3 @@ function cadastro(){
     msgSuccess.setAttribute('style', 'display: none')
   }
 }
-
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".nav");
-
-hamburger.addEventListener("click", () => nav.classList.toggle("active"));

@@ -7,7 +7,6 @@
 
 body{
   background-image: url(/teste/imagens/cerveja_brinde.png);
-  background-size: auto;
 }
 
 .header{
@@ -62,7 +61,7 @@ nav h1{
 
 .Animated-Radial-Menu {
   min-height: 100vh;
-  
+  z-index: 0;
 }
 
 .Animated-Radial-Menu .menu {
