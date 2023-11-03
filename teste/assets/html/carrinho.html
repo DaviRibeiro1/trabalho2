@@ -3,10 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Carrinho</title>
-  <link rel="stylesheet" href="/teste/carrinho/style.css">
+
+  <link rel="stylesheet" href="/teste/assets/css/carrinho.css">
+  <link rel="shortcut icon" href="/teste/imagens/cerveja_brinde.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+
+  <script async src="/teste/assets/js/carrinho.js"></script>
+  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-  
+  <header class="header">
+    <nav class="nav">
+      <div class="Animated-Radial-Menu">
+
+        <ul id="menu" class="menu">
+            <div class="toggle"><ion-icon name="beer-outline"></ion-icon></div>
+            <li style="--i: 0; --clr: #cecfc8;">
+                <a href="/teste/assets/html/produtos.html">
+                    <ion-icon name="beer-outline"></ion-icon>
+                </a>
+            </li>
+            <li style="--i: 1; --clr: #cecfc8;">
+                <a href="/teste/assets/html/login.html">
+                    <ion-icon name="person-outline"></ion-icon>
+                </a>
+            </li>
+            <li style="--i: 2; --clr: #cecfc8;">
+                <a href="/teste/assets/html/contato.html">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </li>
+            <li style="--i: 3; --clr: #cecfc8;">
+                <a href="/teste/assets/html/contato.html">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        
+      </div>
+      <h1>Tornado Delivery</h1>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th class="table-head-item first-col">Item</th>
+            <th class="table-head-item second-col">Preço</th>
+            <th class="table-head-item third-col">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--<tr class="cart-product">
+            <td class="product-identification">
+              <img  class="cart-product-image" src="/teste/imagens/heineken1.png" alt="heineken">
+              <strong class="cart-product-title">Heineken</strong>
+            </td>
+            <td>
+              <span class="cart-product-price">R$11,99</span>
+            </td>
+            <td>
+              <input class="product-qtd-input" type="number" value="1" min="0">
+              <button class="remove-product-button" type="button">Remover</button>
+            </td>
+          </tr>
+          <tr class="cart-product">
+            <td class="product-identification">
+              <img  class="cart-product-image" src="/teste/imagens/eisenbahn2.png" alt="heineken">
+              <strong class="cart-product-title">Eisenbahn</strong>
+            </td>
+            <td>
+              <span class="cart-product-price">R$10,99</span>
+            </td>
+            <td>
+              <input class="product-qtd-input" type="number" value="2" min="0">
+              <button class="remove-product-button" type="button">Remover</button>
+            </td>
+          </tr>-->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="cart-total-container">
+              <strong>Total</strong>
+              <span>R$0,00</span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <button class="purchase-button" type="button">Finalizar Compra</button>
+  </main>
+  <footer>
+    <p class="rodape">&copy; 2023 Tornado Delivery</p>
+  </footer>
 </body>
 </html>

@@ -134,7 +134,7 @@ nav h1{
   padding: 5px 0 10px 0;
 }
 
-.btn{
+.buttonBuy{
   margin-top: 20px;
   font-size: 15px;
   padding: 10px 50px;
@@ -147,7 +147,7 @@ nav h1{
   cursor: pointer;
 }
 
-.btn:hover{
+.buttonBuy:hover{
   transition: 0.5s background;
   background-color: #000000;
 }
