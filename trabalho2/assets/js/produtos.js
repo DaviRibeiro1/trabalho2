@@ -40,6 +40,6 @@ function addProductToCart(event){
     
     localStorage.setItem('listCart', JSON.stringify(listCart))
 
-    console.log(listCart)
+    alert("Produto adicionado com sucesso")
     
 }
