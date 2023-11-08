@@ -44,9 +44,9 @@ nome.addEventListener('keyup', () => {
     nome.setAttribute('style', 'border-color: red')
     validNome = false
   } else {
-    labelNome.setAttribute('style', 'color: green')
+    labelNome.setAttribute('style', 'color: lightgreen')
     labelNome.innerHTML = 'Nome'
-    nome.setAttribute('style', 'border-color: green')
+    nome.setAttribute('style', 'border-color: lightgreen')
     validNome = true
   }
 })
@@ -58,9 +58,9 @@ senha.addEventListener('keyup', () => {
     senha.setAttribute('style', 'border-color: red')
     validSenha = false
   } else {
-    labelSenha.setAttribute('style', 'color: green')
+    labelSenha.setAttribute('style', 'color: lightgreen')
     labelSenha.innerHTML = 'Usuário'
-    senha.setAttribute('style', 'border-color: green')
+    senha.setAttribute('style', 'border-color: lightgreen')
     validSenha = true
   }
 })
@@ -72,9 +72,9 @@ email.addEventListener('keyup', () => {
     email.setAttribute('style', 'border-color: red')
     validEmail = false
   } else {
-    labelEmail.setAttribute('style', 'color: green')
+    labelEmail.setAttribute('style', 'color: lightgreen')
     labelEmail.innerHTML = 'Email:'
-    email.setAttribute('style', 'border-color: green')
+    email.setAttribute('style', 'border-color: lightgreen')
     validEmail = true
   }
 })
@@ -86,13 +86,12 @@ telefone.addEventListener('keyup', () => {
     telefone.setAttribute('style', 'border-color: red')
     validTelefone = false
   } else {
-    labelTelefone.setAttribute('style', 'color: green')
+    labelTelefone.setAttribute('style', 'color: lightgreen')
     labelTelefone.innerHTML = 'Telefone'
-    telefone.setAttribute('style', 'border-color: green')
+    telefone.setAttribute('style', 'border-color: lightgreen')
     validTelefone = true
   }
 })
-
 
 cpf.addEventListener('keyup', () => {
   if(cpf.value.length < 14 ){
@@ -101,13 +100,12 @@ cpf.addEventListener('keyup', () => {
     cpf.setAttribute('style', 'border-color: red')
     validCPF = false
   } else {
-    labelCpf.setAttribute('style', 'color: green')
+    labelCpf.setAttribute('style', 'color: lightgreen')
     labelCpf.innerHTML = 'CPF:'
-    cpf.setAttribute('style', 'border-color: green')
+    cpf.setAttribute('style', 'border-color: lightgreen')
     validCPF = true
   }
 })
-
 
 function cadastro(){
   if(validNome && validSenha && validEmail && validTelefone && validCPF){

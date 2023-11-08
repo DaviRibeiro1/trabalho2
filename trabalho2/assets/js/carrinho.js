@@ -4,6 +4,8 @@ if (document.readyState == "loading"){
   ready()
 }
 
+var totalAmount = "0,00"
+
 function ready(){
   const removeProductButtons = document.getElementsByClassName("remove-product-button")
   for (var i = 0; i < removeProductButtons.length; i++) {
@@ -17,7 +19,10 @@ function ready(){
 
     addCart()
 
-  localStorage.clear()
+  const compraButton = document.getElementsByClassName("purchase-button")[0]
+  compraButton.addEventListener("click", makePurchase)
+
+
 }
 
 let toggle = document.querySelector('.toggle');
@@ -25,6 +30,24 @@ let menu = document.querySelector('.menu');
 
 toggle.onclick = () => {
   menu.classList.toggle('active')
+}
+
+function makePurchase(){
+  if(totalAmount === "0,00"){
+    alert("Seu carrinho está vazio!!")
+  } else {
+    alert(
+      `
+    Obrigado pela compra!!
+    Volte sempre!!
+    `
+    )
+  }
+
+  document.querySelector(".cart-table tbody").innerHTML = ""
+  localStorage.clear()
+
+  updateTotal()
 }
 
 function checkIfInputNull(event){
@@ -42,7 +65,7 @@ function removeProduct(event){
 }
 
 function updateTotal(){
-let totalAmount = 0
+totalAmount = 0
 const cartProducts = document.getElementsByClassName("cart-product")
 for (var i = 0; i < cartProducts.length; i++) {
   // console.log(cartProducts[i])
@@ -64,14 +87,6 @@ function addCart(){
   const productImage = listCart[i][0]
   const productTitle = listCart[i][1]
   const productPrice = listCart[i][2]
-
-  const productsCartName = document.getElementsByClassName("cart-product-title")
-  for(var x = 0; x < productsCartName.length; x++){
-    if(productsCartName[x].innerText == productTitle){
-      productsCartName[x].parentElement.parentElement.getElementsByClassName("product-qtd-input")[0].value++
-      
-    }
-  }
 
   let newCartProduct = document.createElement("tr")
   newCartProduct.classList.add("cart-product")
