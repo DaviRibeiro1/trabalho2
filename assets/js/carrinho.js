@@ -61,6 +61,8 @@ function checkIfInputNull(event){
 
 function removeProduct(event){
   event.target.parentElement.parentElement.remove()
+
+  localStorage.clear()
   updateTotal()
 }
 
