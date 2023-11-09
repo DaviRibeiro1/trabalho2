@@ -22,6 +22,10 @@ let telefone = document.querySelector('#telefone')
 let labelTelefone = document.querySelector('#labelTelefone')
 let validTelefone = false
 
+let nascimento = document.querySelector('#nascimento')
+let labelNascimento = document.querySelector('#labelNascimento')
+let validNascimento = false
+
 let cpf = document.querySelector('#cpf')
 let labelCpf = document.querySelector('#labelCpf')
 let validCPF = false
@@ -32,6 +36,12 @@ function mascara_cpf() {
   } else if(cpf.value.length == 11){
     cpf.value += "-"
   }
+}
+
+function mascara_telefone() {
+  if (telefone.value.length == 5){
+    telefone.value += "-"
+  } 
 }
 
 let msgError = document.querySelector('#msgError')
@@ -54,7 +64,7 @@ nome.addEventListener('keyup', () => {
 senha.addEventListener('keyup', () => {
   if(senha.value.length < 6){
     labelSenha.setAttribute('style', 'color: red')
-    labelSenha.innerHTML = 'Senha deve contar no minimo 5 caracteres'
+    labelSenha.innerHTML = 'Senha deve contar no minimo 6 caracteres'
     senha.setAttribute('style', 'border-color: red')
     validSenha = false
   } else {
@@ -80,18 +90,48 @@ email.addEventListener('keyup', () => {
 })
 
 telefone.addEventListener('keyup', () => {
-  if(telefone.value.length < 9){
+  if(telefone.value.length < 10){
     labelTelefone.setAttribute('style', 'color: red')
     labelTelefone.innerHTML = 'Telefone inválido'
     telefone.setAttribute('style', 'border-color: red')
     validTelefone = false
   } else {
     labelTelefone.setAttribute('style', 'color: lightgreen')
-    labelTelefone.innerHTML = 'Telefone'
+    labelTelefone.innerHTML = 'Telefone:'
     telefone.setAttribute('style', 'border-color: lightgreen')
     validTelefone = true
   }
 })
+
+
+  function validarIdadeMinima() {
+    const dataNascimentoInput = document.getElementById("nascimento");
+    const dataNascimento = new Date(dataNascimentoInput.value);
+    const hoje = new Date();
+    const idadeMinima = 18;
+
+    const diferencaAnos = hoje.getFullYear() - dataNascimento.getFullYear();
+    const diferencaMeses = hoje.getMonth() - dataNascimento.getMonth();
+    const diferencaDias = hoje.getDate() - dataNascimento.getDate();
+
+
+    if (diferencaAnos < idadeMinima || (diferencaAnos === idadeMinima && diferencaMeses < 0) || (diferencaAnos === idadeMinima &&   diferencaMeses === 0 && diferencaDias <= 0)) {
+        const msgError = document.querySelector("#labelNascimento");
+        msgError.innerText = "Você deve ter pelo menos 18 anos de idade.";
+        dataNascimentoInput.value = "";
+        labelNascimento.setAttribute('style', 'color: red')
+        nascimento.setAttribute('style', 'border-color: red')
+        validNascimento = false 
+    } else {
+        const msgError = document.getElementById("msgError");
+        msgError.innerHTML = "";
+        labelNascimento.innerHTML = 'Nascimento: '
+        labelNascimento.setAttribute('style', 'color: lightgreen')
+        nascimento.setAttribute('style', 'border-color: lightgreen')
+        validNascimento = true
+    }
+  }
+
 
 cpf.addEventListener('keyup', () => {
   if(cpf.value.length < 14 ){
@@ -108,7 +148,7 @@ cpf.addEventListener('keyup', () => {
 })
 
 function cadastro(){
-  if(validNome && validSenha && validEmail && validTelefone && validCPF){
+  if(validNome && validSenha && validEmail && validTelefone && validCPF &&validNascimento){
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
     
     listaUser.push(
@@ -128,7 +168,7 @@ function cadastro(){
     msgError.innerHTML = ''
 
     setTimeout(()=>{
-        window.location.href = '/teste/assets/html/login.html'
+        window.location.href = '/assets/html/login.html'
     }, 3000)
   
     

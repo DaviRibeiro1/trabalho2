@@ -74,12 +74,16 @@
                 </div>
                 <div class="label-float">
                     <label for="telefone" id="labelTelefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" required><br><br>
+                    <input type="tel" id="telefone" name="telefone" maxlength="10" onkeyup="mascara_telefone()" required><br><br>
+                </div>
+                <div class="label-float">
+                    <label for="nascimento" id="labelNascimento">Nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento" onchange="validarIdadeMinima()" required><br><br>
                 </div>
                 <div class="label-float">
                     <label for="cpf" id="labelCpf">CPF:</label>
                     <input type="text" id="cpf" name="cpf" maxlength="14"
-                    autocomplete="off" onkeyup="mascara_cpf()"><br><br>
+                    autocomplete="off" onkeyup="mascara_cpf()">
                 </div>
                 <div class="btn">
                     <button onclick="cadastro()" class="btnCadastro" >Cadastrar</button>
