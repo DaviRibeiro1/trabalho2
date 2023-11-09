@@ -17,7 +17,7 @@ body{
 
 nav{
   height: 70px;
-  width: 100%;
+  width: 100vw;
   margin-inline: auto;
   display: flex;
   justify-content: center;
@@ -133,7 +133,7 @@ nav h1{
 
 .slideshow {
   z-index: 0;
-  width: 100%;
+  width: 100vw;
   height: 300px;
   overflow: hidden;
   position: relative;
@@ -148,7 +148,7 @@ nav h1{
 
 
 table {
-    width: 100%;
+    width: 100vw;
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 25px;
