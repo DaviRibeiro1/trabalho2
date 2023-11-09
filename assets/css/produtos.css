@@ -175,11 +175,4 @@ nav h1{
     width: 300px;
   }
 
-  .Animated-Radial-Menu .menu .toggle{
-    display: none;
-  }
-
-  .Animated-Radial-Menu .menu li a{
-    display: none;
-  }
 }
