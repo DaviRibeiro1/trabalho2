@@ -37,7 +37,7 @@ function entrar(){
   })
     
   if(usuario.value == userValid.user && senha.value == userValid.senha){
-    window.location.href = '/assets/html/produtos.html'
+    window.location.href = '/trabalho2/assets/html/produtos.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
@@ -55,8 +55,3 @@ function entrar(){
   }
   
 }
-
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".nav");
-
-hamburger.addEventListener("click", () => nav.classList.toggle("active"));

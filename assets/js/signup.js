@@ -168,7 +168,7 @@ function cadastro(){
     msgError.innerHTML = ''
 
     setTimeout(()=>{
-        window.location.href = '/assets/html/login.html'
+        window.location.href = '/trabalho2/assets/html/login.html'
     }, 3000)
   
     
