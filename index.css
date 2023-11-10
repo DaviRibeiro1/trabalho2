@@ -159,7 +159,6 @@ table {
 }
 
 tr, td {
-    
     padding: 8px;
     text-align: center;
 }
@@ -192,4 +191,19 @@ th {
     font-size: 20px;
   }
 
+  table {
+    width: 100vw;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #000000;
+    background-color: #ebebebe0;
+}
+
+tr, td {
+    padding: 3px;
+    text-align: center;
+}
   }
