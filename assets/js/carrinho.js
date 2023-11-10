@@ -25,7 +25,12 @@ function ready(){
 
 }
 
+let toggle = document.querySelector('.toggle');
+let menu = document.querySelector('.menu');
 
+toggle.onclick = () => {
+  menu.classList.toggle('active')
+}
 
 function makePurchase(){
   if(totalAmount === "0,00"){
