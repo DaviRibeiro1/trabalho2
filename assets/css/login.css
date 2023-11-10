@@ -191,6 +191,10 @@ p > a:hover{
 }
 
 @media (max-width: 750px){
+  nav h1 {
+    font-size: 20px;
+  }
+  
   .caixa-cadastro{
     width: 350px;
   }
@@ -199,3 +203,4 @@ p > a:hover{
     width: 250px;
   }
 }
+

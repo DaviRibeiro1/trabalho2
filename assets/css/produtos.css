@@ -175,4 +175,8 @@ nav h1{
     width: 300px;
   }
 
+  nav h1 {
+    font-size: 20px;
+  }
+
 }

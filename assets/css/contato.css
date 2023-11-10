@@ -175,6 +175,10 @@ input:focus{
 }
 
 @media (max-width: 750px){
+  nav h1 {
+    font-size: 20px;
+  }
+  
   .caixa-cadastro{
     width: 350px;
   }
