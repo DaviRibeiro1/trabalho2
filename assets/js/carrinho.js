@@ -86,7 +86,7 @@ function addCart(){
   const listCart = JSON.parse(localStorage.getItem('listCart'))
   
   if (listCart && listCart.length > 0){
-  for(var i = 0; i <= listCart.length; i++){
+  for(var i = 0; i < listCart.length; i++){
   const productImage = listCart[i][0]
   const productTitle = listCart[i][1]
   const productPrice = listCart[i][2]
