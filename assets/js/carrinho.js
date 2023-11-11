@@ -84,7 +84,8 @@ document.querySelector(".cart-total-container span").innerText = "R$" + totalAmo
 function addCart(){
 
   const listCart = JSON.parse(localStorage.getItem('listCart'))
-
+  
+  if (listCart && listCart.length > 0){
   for(var i = 0; i <= listCart.length; i++){
   const productImage = listCart[i][0]
   const productTitle = listCart[i][1]
@@ -115,5 +116,6 @@ function addCart(){
   newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfInputNull)
   newCartProduct.getElementsByClassName("remove-product-button")[0].addEventListener("click", removeProduct)
   }
+ }
 }
 
