@@ -117,12 +117,10 @@ a{
   text-decoration: none;
 }
 
-
 .navbar{
   background-color: #777777;
-  max-width: 100vw;
-  height: 70px;
-  margin-inline: auto;
+  max-width: 100%;
+  height: 40px;
   display: flex;
 }
 
@@ -137,19 +135,29 @@ a{
   display: inline-block;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  padding-block: 16px;
+  padding-block: 10px;
 }
 
 .nav-list li a{
   display: inline-block;
   color: rgb(0, 0, 0);
   text-decoration: none;
-  padding: 9px 20px;
+  padding: 0px 20px;
 }
 
 .nav-list li:hover{
   background-color: #fff;
   color: #000000;
+}
+
+.conteudo{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.conteudo img{
+  width: 100vw;
 }
 
 @media (max-width: 750px){

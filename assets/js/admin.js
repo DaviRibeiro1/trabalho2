@@ -15,4 +15,3 @@ function sair() {
   localStorage.removeItem("userLogado");
   window.location.href = "/trabalho2/index.html";
 }
-

@@ -10,9 +10,9 @@ if (document.readyState == "loading"){
             addToCartButtons[i].addEventListener("click", addProductToCart)
         }
 
-    
+        admLogado()
     }
-    admLogado()
+    
 
 let toggle = document.querySelector('.toggle')
 let menu = document.querySelector('.menu')
@@ -50,12 +50,13 @@ function admLogado(){
 
     let userValid = {
         nome: '',
-        user: '',
+        user: 'admin@admin',
         senha: ''
     }
     
-    listaUser = JSON.parse(localStorage.getItem('listaUser'))
+    let listaUser = JSON.parse(localStorage.getItem('listaUser'))
     
+    if (listaUser && listaUser.length > 0){
     listaUser.forEach((item) => {
 
         userValid = {
@@ -65,6 +66,7 @@ function admLogado(){
         }
         
     })
+    }
 
     login = document.getElementById("login");
     if(localStorage.getItem("token") == null){
@@ -72,7 +74,8 @@ function admLogado(){
     } else if (userValid.user == "admin@admin" ){
         login.href = "/trabalho2/assets/html/admin.html"
     }
-    else {
+    else if (userValid.user != "admin@admin"){
         login.href = "/trabalho2/assets/html/user.html";
     }
-    }
+
+}
