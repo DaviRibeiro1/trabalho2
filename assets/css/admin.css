@@ -1,0 +1,233 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  background: #333;
+
+}
+
+nav{
+  height: 70px;
+  width: 100vw;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav h1{
+  font-size: 30px;
+  font-family: 'Bungee Inline', sans-serif;
+  color: yellow;
+  
+}
+
+.Animated-Radial-Menu {
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.Animated-Radial-Menu .menu {
+  position: absolute;
+  top: -105px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Animated-Radial-Menu .menu .toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: yellow;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 2em;
+  transition: transform 0.5s;
+}
+
+.Animated-Radial-Menu .menu li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transition: 0.3s;
+  transition-delay: calc(0.04s * var(--i));
+  transform: rotate(0deg) translateX(110px);
+  transform-origin: 140px;
+}
+
+.Animated-Radial-Menu .menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: yellow;
+  color: #000000;
+  border: 2px solid var(--clr);
+  border-radius: 50%;
+  font-size: 1.5em;
+  transform: rotate(calc(0deg * var(--i)));
+  transition: 0.3s;
+}
+
+.Animated-Radial-Menu .menu li a:hover {
+  background: var(--clr);
+  color: #333;
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+}
+
+.Animated-Radial-Menu .menu.active .toggle {
+  transform: rotate(360deg);
+}
+
+.Animated-Radial-Menu .menu.active li {
+  transform: translate(calc(65px * var(--i))) translateX(175px);
+}/*# sourceMappingURL=Animated-Radial-Menu.css.map */
+
+#logado{
+  font-family: 'Bungee Inline', sans-serif;
+  color: yellow;
+  position: absolute;
+  right: 100px;
+}
+
+button{
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: red;
+  position: absolute;
+  right: 10px;
+}
+
+a{
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+
+.navbar{
+  background-color: #777777;
+  max-width: 100vw;
+  height: 70px;
+  margin-inline: auto;
+  display: flex;
+}
+
+.nav-list{
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  list-style: none;
+}
+
+.nav-list li{
+  display: inline-block;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  padding-block: 16px;
+}
+
+.nav-list li a{
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 9px 20px;
+}
+
+.nav-list li:hover{
+  background-color: #fff;
+  color: #000000;
+}
+
+.conteudo{
+  display: flex;
+  justify-content: center;
+}
+
+table{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table tr, table td, table th{
+  border: 1px solid #000000;
+}
+
+.titulo{
+  text-align: center;
+  background-color: red;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.codigo{
+  text-align: center;
+}
+
+.desc{
+  text-align: center;
+}
+
+.uni{
+  text-align: center;
+}
+
+.qtd{
+  text-align: center;
+
+}
+
+.valor{
+  text-align: center;
+
+}
+
+img{
+  height: 100px;
+  width: 120px;
+  margin-left: 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 750px){
+
+  nav h1 {
+    font-size: 20px;
+  }
+
+  button{
+    display: block;
+    margin: 5px auto 0;
+  }
+
+  #logado{
+    display: none;
+    position: absolute;
+    right: 0;
+    margin: 0px auto 0;
+  }
+
+  .nav-list{
+    gap: 10px;
+  }
+
+  .nav-list li a{
+    padding: 4px 10px;
+  }
+}
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Tornado Delivery</title>
+  
+    <link rel="stylesheet" href="/trabalho2/assets/css/admin.css">
+    <link rel="shortcut icon" href="/trabalho2/imagens/cerveja_brinde.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+  
+    <script defer src="/trabalho2/assets/js/admin.js"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="Animated-Radial-Menu">
+  
+          <ul id="menu" class="menu">
+              <div class="toggle"><ion-icon name="beer-outline"></ion-icon></div>
+              <li style="--i: 0; --clr: #cecfc8;">
+                  <a href="/trabalho2/index.html">
+                      <ion-icon name="home-outline"></ion-icon>
+                  </a>
+              </li>
+              <li style="--i: 1; --clr: #cecfc8;">
+                  <a id="login" href="/trabalho2/assets/html/produtos.html">
+                      <ion-icon name="beer-outline"></ion-icon>
+                  </a>
+              </li>
+              <li style="--i: 2; --clr: #cecfc8;">
+                  <a href="/trabalho2/assets/html/contato.html">
+                      <ion-icon name="mail-outline"></ion-icon>
+                  </a>
+              </li>
+              <li style="--i: 3; --clr: #cecfc8;">
+                  <a href="/trabalho2/assets/html/carrinho.html">
+                      <ion-icon name="cart-outline"></ion-icon>
+                  </a>
+              </li>
+          </ul>
+          
+        </div>
+        <h1>Tornado Delivery</h1>
+        <span id="logado"></span>
+        <button onclick="sair()">Sair</button>
+      </nav>
+    </header>
+    <main>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="estoque" onclick="alterarConteudo()"><a href="#">Estoque</a></li>
+          <li class="historico" onclick="alterarConteudo()"><a href="#">Historico de compra</a></li>
+          <li class="faturamento" onclick="alterarConteudo()"><a href="#">Faturamento</a></li>
+          <li class="avaliacao" onclick="alterarConteudo()"><a href="#">Avaliações</a></li>
+        </ul>
+      </nav>
+      <div class="conteudo">
+        <table>
+      
+          <tbody>
+            <tr class="titulo">
+              <td>Código</td>
+              <td>Imagem</td>
+              <td>Descrição</td>
+              <td>Quantidade<br> estoque</td>
+              <td>Preço</td>
+            </tr>
+            <tr>
+              <td class="codigo">001</td>
+              <td class="desc"><img src="/trabalho2/imagens/heineken1.png" alt=""></td>
+              <td class="uni">HEINEKEN</td>
+              <td class="qtd">17</td>
+              <td class="valor">R$11,99</td>
+            </tr>
+            <tr>
+              <td class="codigo">002</td>
+              <td class="desc"><img src="/trabalho2/imagens/eisenbahn2.png" alt=""></td>
+              <td class="uni">EISENBAHN</td>
+              <td class="qtd">12</td>
+              <td class="valor">R$10,99</td>
+            </tr>
+            <tr>
+              <td class="codigo">003</td>
+              <td class="desc"><img src="/trabalho2/imagens/stellartois3.jpg" alt=""></td>
+              <td class="uni">STELLA ARTOIS</td>
+              <td class="qtd">4</td>
+              <td class="valor">R$12,70</td>
+            </tr>
+            <tr>
+              <td class="codigo">004</td>
+              <td class="desc"><img src="/trabalho2/imagens/budweiser4.png" alt=""></td>
+              <td class="uni">BUDWEISER</td>
+              <td class="qtd">8</td>
+              <td class="valor">R$10,99</td>
+            </tr>
+            <tr>
+              <td class="codigo">005</td>
+              <td class="desc"><img src="/trabalho2/imagens/glacial5.png" alt=""></td>
+              <td class="uni">GLACIAL</td>
+              <td class="qtd">12</td>
+              <td class="valor">R$5,00</td>
+            </tr>
+            <tr>
+              <td class="codigo">006</td>
+              <td class="desc"><img src="/trabalho2/imagens/bramaduplo6.jpg" alt=""></td>
+              <td class="uni">BRAHMA DUPLO MALTE</td>
+              <td class="qtd">6</td>
+              <td class="valor">R$9,99</td>
+            </tr>
+            <tr>
+              <td class="codigo">007</td>
+              <td class="desc"><img src="/trabalho2/imagens/skol7.jpg" alt=""></td>
+              <td class="uni">SKOL</td>
+              <td class="qtd">10</td>
+              <td class="valor">R$8,99</td>
+            </tr>
+            <tr>
+              <td class="codigo">008</td>
+              <td class="desc"><img src="/trabalho2/imagens/bavaria8.jpg" alt=""></td>
+              <td class="uni">BAVARIA</td>
+              <td class="qtd">12</td>
+              <td class="valor">R$4,59</td>
+            </tr>
+          </tbody>
+      
+        </table>
+      </div>
+    </main>
+
+    
+  </body>
+</html>

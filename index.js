@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Fechar o pop-up
       popup.style.display = "none";
   });
+  admLogado()
 });
 
 let toggle = document.querySelector('.toggle');
@@ -41,6 +42,40 @@ function nextImage() {
     currentImage = (currentImage + 1) % images.length;
     images[currentImage].style.opacity = 1;
 }
-
-// Iniciar a transição automaticamente a cada 3 segundos
 setInterval(nextImage, 3000);
+
+
+
+function admLogado(){
+
+  let userValid = {
+    nome: '',
+    user: 'admin@admin',
+    senha: ''
+  }
+  
+  let listaUser = JSON.parse(localStorage.getItem('listaUser'))
+  
+  if (listaUser && listaUser.length > 0){
+  listaUser.forEach((item) => {
+        
+      userValid = {
+          nome: item.nomeCad,
+          user: item.userCad,
+          senha: item.senhaCad
+      }
+      
+  })
+}
+
+  login = document.getElementById("login");
+  if(localStorage.getItem("token") == null){
+    login.href = "/trabalho2/assets/html/login.html";
+  } else if (userValid.user == "admin@admin" ){
+    login.href = "/trabalho2/assets/html/admin.html"
+  }
+  else if (userValid.user != "admin@admin"){
+    login.href = "/trabalho2/assets/html/user.html";
+  }
+
+}

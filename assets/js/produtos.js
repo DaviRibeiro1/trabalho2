@@ -9,8 +9,10 @@ if (document.readyState == "loading"){
         for(var i = 0; i < addToCartButtons.length; i++){
             addToCartButtons[i].addEventListener("click", addProductToCart)
         }
-    }
 
+    
+    }
+    admLogado()
 
 let toggle = document.querySelector('.toggle')
 let menu = document.querySelector('.menu')
@@ -43,3 +45,34 @@ function addProductToCart(event){
     alert("Produto adicionado com sucesso")
     
 }
+
+function admLogado(){
+
+    let userValid = {
+        nome: '',
+        user: '',
+        senha: ''
+    }
+    
+    listaUser = JSON.parse(localStorage.getItem('listaUser'))
+    
+    listaUser.forEach((item) => {
+
+        userValid = {
+            nome: item.nomeCad,
+            user: item.userCad,
+            senha: item.senhaCad
+        }
+        
+    })
+
+    login = document.getElementById("login");
+    if(localStorage.getItem("token") == null){
+        login.href = "/trabalho2/assets/html/login.html";
+    } else if (userValid.user == "admin@admin" ){
+        login.href = "/trabalho2/assets/html/admin.html"
+    }
+    else {
+        login.href = "/trabalho2/assets/html/user.html";
+    }
+    }

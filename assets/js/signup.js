@@ -132,7 +132,6 @@ telefone.addEventListener('keyup', () => {
     }
   }
 
-
 cpf.addEventListener('keyup', () => {
   if(cpf.value.length < 14 ){
     labelCpf.setAttribute('style', 'color: red')
