@@ -23,12 +23,10 @@ toggle.onclick = ()=>{
 
 function addProductToCart(event){
     const button = event.target
-    console.log(button)
     const productInfos = button.parentElement
     const productImage = productInfos.getElementsByClassName("product-image")[0].src
     const productTitle = productInfos.getElementsByClassName("product-title")[0].innerText
     const productPrice = productInfos.getElementsByClassName("product-price")[0].innerText
-    console.log(productImage)
 
     let listCart = JSON.parse(localStorage.getItem('listCart') || '[]')
     
